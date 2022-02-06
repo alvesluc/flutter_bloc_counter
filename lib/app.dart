@@ -7,8 +7,5 @@ class CounterApp extends MaterialApp {
       : super(
           key: key,
           home: const CounterPage(),
-          // theme: ThemeData(
-          //   useMaterial3: true,
-          // ),
         );
 }
