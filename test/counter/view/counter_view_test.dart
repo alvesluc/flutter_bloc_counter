@@ -14,11 +14,10 @@ const _decrementButtonKey = Key('counterView_decrement_floatingActionButton');
 void main() {
   late CounterCubit counterCubit;
 
-  void setUp() => counterCubit = MockCounterCubit();
-
+  setUp(() {
+    counterCubit = MockCounterCubit();
+  });
   group('CounterView', () {
-    setUp();
-
     testWidgets('renders current CounterCubit state', (tester) async {
       when(() => counterCubit.state).thenReturn(42);
       await tester.pumpWidget(
